@@ -1,9 +1,14 @@
 # frozen_string_literal: true
 
+require 'minitest/autorun'
+require 'minitest/reporters'
+Minitest::Reporters.use!
+
 require_relative '../lib/bottles'
 
 class BottlesTest < Minitest::Test
   def test_the_first_verse
+    skip
     expected = <<~VERSE
       99 bottles of beer on the wall, 99 bottles of beer.
       Take one down and pass it around, 98 bottles of beer on the wall.
