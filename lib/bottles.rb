@@ -12,6 +12,16 @@ class Bottles
     end
   end
 
+  def verses(start_verse, end_verse)
+    start_verse.downto(end_verse)
+               .map { |verse_num| verse(verse_num) }
+               .join("\n")
+  end
+
+  def song
+    verses(99, 0)
+  end
+
   private
 
   def verse_over2(verse_num)
